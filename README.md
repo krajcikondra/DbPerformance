@@ -4,7 +4,7 @@ This library is useful for bulk import to database.
 
 Install in composer.json
 ```sh
-require: "db-performance/multi": "dev-master"
+require: "helbrary/db-performance": "dev-master"
 ```
 Multi-insert
 ------------

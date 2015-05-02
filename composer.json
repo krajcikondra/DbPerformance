@@ -1,5 +1,5 @@
 {
-	"name": "db-performance/multi",
+	"name": "helbrary/db-performance",
 	"description": "Library for increase performance of db in Nette Database using  multi-update and multi-insert.",
 	"type": "library",
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
@@ -9,7 +9,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"DbPerformance\\": "src/"
+			"Helbrary\\DbPerformance\\": "src/"
 		},
 		"classmap": [
 			"src/MultiInsert.php",
