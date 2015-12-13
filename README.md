@@ -113,7 +113,7 @@ for ($i = 0; $i < 100000; $i++) {
 		"description" => "description" . $i,
 	));
 }
-$this->database->commit();
+$multiInsert->save();
 ```
 
 4) Using Helbrary\DbPerformance\MultiInsert with buffer size 500: **0 min 14 sec**
