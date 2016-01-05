@@ -56,6 +56,10 @@ class MultiUpdate extends Multi
 	public function save()
 	{
 		try {
+			// Do not try to update on an empty buffer
+			if (count($this->buffer) == 0) {
+				return;
+			}
 			$this->database->beginTransaction();
 			$this->database->queryArgs($this->buildMultiUpdate(), $this->getArgs());
 			$this->database->commit();
@@ -88,6 +92,10 @@ class MultiUpdate extends Multi
 	 */
 	private function saveIndividually()
 	{
+		// Do not try to save on an empty buffer
+		if (count($this->buffer) == 0) {
+			return;
+		}
 		$this->database->beginTransaction();
 		foreach ($this->buffer as $id => $value) {
 			try {

@@ -36,6 +36,10 @@ class MultiInsert extends Multi
 	public function save()
 	{
 		try {
+			// Do not try to save on an empty buffer
+			if (count($this->buffer) == 0) {
+				return;
+			}
 			$this->database->beginTransaction();
 			$this->database->table($this->table)->insert($this->buffer);
 			$this->database->commit();
@@ -51,6 +55,10 @@ class MultiInsert extends Multi
 	 */
 	private function saveIndividually()
 	{
+		// Do not try to save on an empty buffer
+		if (count($this->buffer) == 0) {
+			return;
+		}
 		$this->database->beginTransaction();
 		foreach ($this->buffer as $itemData) {
 			try {
