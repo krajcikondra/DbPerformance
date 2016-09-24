@@ -3,3 +3,4 @@ vendor/*
 !vendor/web.config
 !vendor/.htaccess
 composer.lock
+tests/php.ini

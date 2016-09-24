@@ -5,7 +5,8 @@
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"require": {
 		"php": ">= 5.3.7",
-		"nette/database": ">= 2.2.0"
+		"nette/database": ">= 2.2.0",
+		"nette/tester": ">=1.6.1"
 	},
 	"autoload": {
 		"psr-4": {
