@@ -31,7 +31,6 @@ install:
 
 before_script:
   - mysql -u root -e 'CREATE DATABASE testdb;'
-  - mysql -u root -e 'DROP TABLE IF EXISTS testdb.test;'
 
 script:
   - ./vendor/bin/tester -p $TESTER_PHP_BIN -s ./tests/

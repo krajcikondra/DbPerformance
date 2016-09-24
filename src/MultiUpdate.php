@@ -38,11 +38,22 @@ class MultiUpdate extends Multi
 	}
 
 	/**
+	 * @deprecated - use update method instead
 	 * Add updated item to buffer
 	 * @param int $id
 	 * @param string $value
 	 */
 	public function add($id, $value)
+	{
+		$this->update($id, $value);
+	}
+
+	/**
+	 * Add updated item to buffer
+	 * @param int $id
+	 * @param string $value
+	 */
+	public function update($id, $value)
 	{
 		if (count($this->buffer) >= $this->limit) {
 			$this->save();
